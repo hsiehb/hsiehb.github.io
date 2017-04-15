@@ -1,9 +1,0 @@
-{
-    "CONFIG": {
-        "title": "Sunset Project",
-        "baseUrl": "/",
-        "DOMAIN": "DEFAULT DOMAIN",
-        "API_VERSION": "v1",
-        "ENV_NAME": "Prod"
-    }
-}
