@@ -1,0 +1,300 @@
+@import "variables";
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.border-none {
+    border: none;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+/***** colors *****/
+.color-success {
+    color: $color-success;
+}
+
+.color-error {
+    color: $color-error;
+}
+
+.color-action-1 {
+    color: $color-action-1;
+}
+
+/***** text & font *****/
+.placeholder {
+    color: #CCCCCC;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+/***** spacing *****/
+.margin-auto {
+    margin: auto;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.margin-t-10 {
+    margin-top: 10px;
+}
+
+.margin-t-20 {
+    margin-top: 20px;
+}
+
+.margin-t-30 {
+    margin-top: 30px;
+}
+
+.margin-t-40 {
+    margin-top: 40px;
+}
+
+.margin-l-10 {
+    margin-left: 10px;
+}
+
+.margin-l-20 {
+    margin-left: 20px;
+}
+
+.margin-l-30 {
+    margin-left: 30px;
+}
+
+.margin-l-40 {
+    margin-left: 40px;
+}
+
+.margin-r-10 {
+    margin-right: 10px;
+}
+
+.margin-r-20 {
+    margin-right: 20px;
+}
+
+.margin-r-30 {
+    margin-right: 30px;
+}
+
+.margin-r-40 {
+    margin-right: 40px;
+}
+
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+
+.margin-b-30 {
+    margin-bottom: 30px;
+}
+
+.margin-b-40 {
+    margin-bottom: 40px;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-t-0 {
+    padding-top: 0;
+}
+
+.padding-t-10 {
+    padding-top: 10px;
+}
+
+.padding-t-20 {
+    padding-top: 20px;
+}
+
+.padding-t-30 {
+    padding-top: 30px;
+}
+
+.padding-t-40 {
+    padding-top: 40px;
+}
+
+.padding-l-0 {
+    padding-left: 0;
+}
+
+.padding-l-10 {
+    padding-left: 10px;
+}
+
+.padding-l-20 {
+    padding-left: 20px;
+}
+
+.padding-l-30 {
+    padding-left: 30px;
+}
+
+.padding-l-40 {
+    padding-left: 40px;
+}
+
+.padding-r-0 {
+    padding-right: 0;
+}
+
+.padding-r-10 {
+    padding-right: 10px;
+}
+
+.padding-r-20 {
+    padding-right: 20px;
+}
+
+.padding-r-30 {
+    padding-right: 30px;
+}
+
+.padding-r-40 {
+    padding-right: 40px;
+}
+
+.padding-b-0 {
+    padding-bottom: 0;
+}
+
+.padding-b-10 {
+    padding-bottom: 10px;
+}
+
+.padding-b-20 {
+    padding-bottom: 20px;
+}
+
+.padding-b-30 {
+    padding-bottom: 30px;
+}
+
+.padding-b-40 {
+    padding-bottom: 40px;
+}
+
+
+/***** positioning *****/
+.position-abs {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-rel {
+    position: relative;
+}
+
+.v-align-mid {
+    vertical-align: middle;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+/***** display *****/
+.display-b {
+    display: block;
+}
+
+.display-i {
+    display: inline;
+}
+
+.display-ib {
+    display: inline-block;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.btn-primary {
+    background-color: $btn-primary-color;
+    border-color: $btn-primary-color;
+}
+
+.btn-primary:hover {
+    background-color: $btn-primary-color-hover;
+    border-color: $btn-primary-color-hover;
+}
+
+/***** x button *****/
+.thin-x {
+    background-image: url('../../../assets/img/thin-x.svg');
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    &:hover {
+        background-image: url('../../../assets/img/thin-x-hover.svg');
+    }
+}
+
+/***** sucess icon *****/
+.success-icon {
+    background-image: url('../../../assets/img/success-icon.svg');
+    height: 40px;
+    width: 40px;
+}
+
+
+.credit_card {
+    border: 1px solid $input-border-color;
+    border-radius: 10px;
+    height: 42px;
+    width: 66px;
+}

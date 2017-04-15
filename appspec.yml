@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/bicuser/workspace/www/moe
+permissions: 
+  - object: /home/bicuser/workspace/www/moe
+    owner: bicuser
+    group: bicuser
+hooks:
+  ApplicationStop:
+    - location: build-scripts/stop_server.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - location: build-scripts/delete_content.sh
+      timeout: 3600
+  ApplicationStart:
+    - location: build-scripts/start_server.sh
+      timeout: 300
+      
+runas: bicuser

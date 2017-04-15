@@ -1,0 +1,39 @@
+ul.cart-items-list
+    li.row.header
+        .col-xs-7
+            strong.product-title Product
+        .col-xs-2
+            strong.quantity-title Quantity
+        .col-xs-3
+            strong.price-title Price
+    li.row.content(*ngFor='let item of cartItems')
+        .col-xs-6.description
+            img.display-ib.v-align-top(src='{{ item.imageUrl }}')
+            .display-ib.v-align-mid
+                div
+                    span.product-name-1.padding-l-10 {{ item.productName1 }}
+                    span.product-name-2.padding-l-10 {{ item.productName2 }}
+                div('*ngIf'='item.promoId')
+                    span.promo-headline.padding-l-10 {{ item.promoHeadLine }}&nbsp;-&nbsp;
+                    span.promo-sub-headline {{ item.promoSubHeadline }}
+        .col-xs-3.quantity.cart-item-style
+            input.text-center(type='number', [(ngModel)]='item.quantity', (blur)='updateItem(item)')
+            img.padding-l-10.cursor-pointer(src='../../../assets/icon/thick-x.svg', (click)='deleteItem(item.productId)')
+        .col-xs-3.price.text-right
+            div('*ngIf'='item.promoId')
+                .original-price.line-through {{ item.productSubTotalWithoutPromo | currency:totals.currency:true }}
+                .discount-price {{ item.productSubTotal | currency:totals.currency:true }}
+            .unit-price(*ngIf='!item.promoId') {{ item.productSubTotal | currency:totals.currency:true }}
+    li.row.footer
+        .offset-xs-6.col-xs-3.subtotal-text.text-right.cart-item-style([ngClass]='{ "vertical-align-text": !isEmea }')
+            div(*ngIf='hasVat')
+                .subtotal-ext-vat Subtotal ext. VAT
+                .estimated-total-vat Estimated Total VAT
+            .total-savings(*ngIf='cart.promotions.length') Total Savings
+            strong.subtotal Subtotal
+        .col-xs-3.subtotal-amount.text-right.cart-item-style([ngClass]='{ "vertical-align-text": !isEmea }')
+            div(*ngIf='hasVat')
+                .totals-subtotal {{ totals.subtotalAfterPromotions | currency:totals.currency:true }}
+                .totals-taxes {{ totals.taxes | currency:totals.currency:true }}
+            .totals-discount(*ngIf='cart.promotions.length') {{ totals.discount | currency:totals.currency:true }}
+            strong.grand-total {{ totals.total | currency:totals.currency:true }}
