@@ -31,7 +31,7 @@ import {
         trigger('fadeInOutTitle', [
             state('inactive', style({
                 opacity: 0,
-                color: 'blue',
+                display: 'none'
             })),
             state('active',   style({
             })),
@@ -60,49 +60,49 @@ export class CustomerInformationComponent implements OnInit {
             'country': 'Austrialia',
             'continent': 'Australia',
             'tz': 'Australia/Sydney',
-            'video': 'https://www.dropbox.com/s/eghy0z9jowuot81/Australia%201.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/mo6d4kdlklpn93e/Australia.mp4?dl=1'
         },
         {
             'name': 'Tokyo',
             'country': 'Japan',
             'continent': 'Asia',
             'tz': 'Asia/Tokyo',
-            'video': 'https://www.dropbox.com/s/55njdj0cxpuoynr/japan%201.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/hd6tv8l7c6gv587/japan.mp4?dl=1'
         },
         {
             'name': 'Casablanca',
             'country': 'Morocco',
             'continent': 'Africa',
             'tz': 'Africa/Casablanca',
-            'video': 'https://www.dropbox.com/s/t758ni6ztu3jg8a/Casa%20Blanca.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/4yut5v5uygv64kq/Morocco.mp4?dl=1'
         },
         {
             'name': 'Seoul',
             'country': 'Korea',
             'continent': 'Asia',
             'tz': 'Asia/Seoul',
-            'video': 'https://www.dropbox.com/s/cqk65c481eumyti/korea%201.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/7uzwska08avq7tw/Korea.mp4?dl=1'
         },
         {
             'name': 'Hong Kong',
             'country': 'China',
             'continent': 'Asia',
             'tz': 'Asia/Hong_Kong',
-            'video': 'https://www.dropbox.com/s/3vjf2jcijnbxd9j/Hong%20Kong.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/3z7wtnn294z0i7c/Hong%20Kong.mp4?dl=1'
         },
         {
             'name': 'Rio De Janeiro',
             'country': 'Brazil',
             'continent': 'America',
             'tz': 'America/Sao_Paulo',
-            'video': 'https://www.dropbox.com/s/vrkip194c9ryemf/Brazil%201.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/ifydm73umlmksl6/Brazil.mp4?dl=1'
         },
         {
             'name': 'Athens',
             'country': 'Greece',
             'continent': 'Europe',
             'tz': 'Europe/Athens',
-            'video': 'https://www.dropbox.com/s/aubrghfzm2opp4g/Greece.mov?dl=1'
+            'video': 'https://www.dropbox.com/s/v6qezd8etw3eg4d/Greece.mp4?dl=1'
         },
 
     ];
@@ -123,7 +123,7 @@ export class CustomerInformationComponent implements OnInit {
 
 
     updateTime(): void {
-        this.currentSunset.time = moment().tz(this.currentSunset.tz).format('h:mma z');
+        this.currentSunset.time = moment().tz(this.currentSunset.tz).format('HH:mm') + ' LT';
         setTimeout(this.updateTime.bind(this), 30000);
     }
 
