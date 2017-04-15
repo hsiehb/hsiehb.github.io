@@ -23,9 +23,8 @@ import {
             state('active',   style({
                 opacity: .5,
                 backgroundColor: 'black',
-                transform: 'scale(1.1)'
             })),
-            transition('inactive => active', animate('1s ease-in')),
+            // transition('inactive => active', animate('.2s ease-in')),
             transition('active => inactive', animate('1s ease-out'))
         ]),
         trigger('fadeInOutTitle', [
